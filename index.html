@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My_homepage</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .header_nav {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.2);
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .logo {
+        padding: 20px;
+        color: rgb(252, 122, 52);
+    }
+
+    .nav_icon {
+        padding: 50px;
+    }
+
+    .nav_icon a {
+        margin: 10px;
+        text-decoration-line: none;
+        /*a태그의 기본적인 밑줄을 없앤다.*/
+        color: white;
+        font-weight: bolder;
+    }
+
+    .nav_icon a:hover {
+        color: rgb(252, 122, 52);
+    }
+
+    .main_image {
+        position: relative;
+    }
+
+    .main_image img {
+        width: 100%;
+    }
+
+    .image_text {
+        font-size: 100px;
+        position: absolute;
+        top: 550px;
+        left: 60px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        animation: slide 2s;
+    }
+
+    .image_button {
+        position: absolute;
+        top: 680px;
+        left: 70px;
+        width: 100px;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        border-radius: 50px;
+        background: transparent;
+    }
+
+    .image_button:hover {
+        background-color: rgb(172, 172, 172);
+    }
+
+    .content_text {
+        text-align: center;
+        font-size: 100px;
+        font-weight: bold;
+    }
+
+    .content_image {
+        display: flex;
+        width: 1110px;
+        margin: 0 auto;
+    }
+
+    .content_image img {
+        width: 350px;
+        height: 300px;
+        margin: 10px;
+    }
+
+    .content_image p {
+        margin: 10px;
+        font-weight: bold;
+    }
+
+    .sub_image {
+        margin-top: 150px;
+        margin-bottom: 250px;
+    }
+
+    .sub_image img {
+        width: 100%;
+    }
+
+    .footer {
+        background-color: gray;
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+
+    .footer {
+        display: flex;
+    }
+
+    .footer ul {
+        list-style: none;
+        display: flex;
+    }
+
+    .footer ul li {
+        font-weight: bold;
+        color: white;
+        margin: 20px;
+    }
+
+    #top_btn {
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        border-style: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: rgba(230, 230, 230);
+        opacity: 0.7;
+        font-weight: bold;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15),
+            0 2px 2px rgba(0, 0, 0, 0.15),
+            0 4px 4px rgba(0, 0, 0, 0.15),
+            0 8px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    button {
+        width: 40px;
+        height: 40px;
+    }
+
+    @keyframes slide {
+        from {
+            left: -100px
+        }
+
+        to {
+            left: 60px;
+        }
+
+    }
+</style>
+
+<body>
+    <div class="header_nav">
+        <h1 class="logo">My Forest</h1>
+        <div class="nav_icon">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">My Forest</a>
+            <a href="">sign</a>
+            <a href="">happy</a>
+        </div>
+    </div>
+
+    <div class="main_image">
+        <img src="AdobeStock_367734180.jpeg" />
+        <div class="image_text">Hello, Forest</div>
+        <button type="button" class="image_button"><span>more</span></button>
+    </div>
+
+    <div class="content">
+        <p class="content_text">I love Forest</p>
+        <div class="content_image">
+            <div class="F_image1">
+                <img src="forest1.jpeg"
+                    class="content_image1" />
+                <p>새벽의 숲</p>
+            </div>
+            <div class="F_image2">
+                <img src="forest2.jpeg"
+                    class="content_image2" />
+                <p>오후의 숲</p>
+            </div>
+            <div class="F_image3">
+                <img src="forest1.jpeg"
+                    class="content_image3" />
+                <p>아침의 숲</p>
+            </div>
+        </div>
+        <div class="sub_image">
+            <img src="forest4.jpeg" />
+        </div>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>My Forest</li>
+            <li>sign</li>
+            <li>happy</li>
+        </ul>
+    </div>
+
+    <button id="top_btn">top</button>
+    <script>
+        // "상단으로" 버튼을 클릭할 때 실행되는 함수
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        var button = document.getElementById('top_btn');
+        button.addEventListener('click', scrollToTop);
+    </script>
+
+</body>
+
+</html>
